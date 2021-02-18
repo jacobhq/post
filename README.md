@@ -1,2 +1,2 @@
-# post
-Newsletter.
+# /Post
+A tech newsletter.
