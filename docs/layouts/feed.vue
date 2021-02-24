@@ -16,7 +16,10 @@
 
       <v-spacer></v-spacer>
 
-      <star />
+      <v-btn icon href="https://github.com/jacobhq/post" target="_blank" @click="star()">
+        <v-icon v-show="!starred">mdi-star</v-icon>
+        <v-icon v-show="starred" color="orange">mdi-star</v-icon>
+      </v-btn>
     </v-app-bar>
     <v-sheet
       id="scrolling-techniques-7"
@@ -34,12 +37,20 @@
 
 <script>
 import pagefooter from '../components/footer'
-import Star from '../components/star.vue'
 
 export default {
   components: {
-    pagefooter,
-    Star
+    pagefooter
+  },
+  data () {
+    return {
+      starred: false
+    }
+  },
+  methods: {
+    star() {
+      this.starred = true
+    }
   }
 }
 </script>
