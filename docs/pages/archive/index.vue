@@ -8,7 +8,7 @@
     <v-btn depressed color="primary" @click="sub" :loading="loading" :disabled="loading">Signup</v-btn>
     <v-btn text color="primary" href="#feed">Get reading</v-btn>
   </div>
-  <v-container style="margin-top: 85vh" class="feed">
+  <v-container style="margin-top: 85vh; margin-bottom: 50px;" id="feed">
     <v-card outlined>
       <v-card-title>Welcome</v-card-title>
       <v-card-text>Welcome to this newsletter</v-card-text>
@@ -37,6 +37,9 @@ export default {
       this.loader = 'loading'
       setTimeout(() => {  this.$router.push({path: '/signup'}) }, 1000)
     }
+  },
+  created() {
+    this.$router.go('/')
   },
   watch: {
       loader () {

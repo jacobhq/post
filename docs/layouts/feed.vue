@@ -1,8 +1,7 @@
 <template>
 <v-app>
-  <v-card class="overflow-hidden" style="height: 100vh;">
     <v-app-bar
-      absolute
+      fixed
       color="white"
       elevate-on-scroll
       scroll-target="#scrolling-techniques-7"
@@ -21,16 +20,9 @@
         <v-icon v-show="starred" color="orange">mdi-star</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-sheet
-      id="scrolling-techniques-7"
-      class="overflow-y-auto"
-      max-height="600"
-    >
       <v-container>
         <Nuxt />
       </v-container>
-    </v-sheet>
-  </v-card>
   <pagefooter />
 </v-app>
 </template>
